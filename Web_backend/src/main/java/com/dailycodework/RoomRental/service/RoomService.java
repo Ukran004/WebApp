@@ -27,11 +27,11 @@ public class RoomService implements IRoomService {
         Room room = new Room();
         room.setRoomType(roomType);
         room.setRoomPrice(roomPrice);
-//        if (!file.isEmpty()){
-//            byte[] photoBytes = file.getBytes();
-//            Blob photoBlob = new SerialBlob(photoBytes);
-//            room.setPhoto(photoBlob);
-//        }
+        if (!file.isEmpty()){
+            byte[] photoBytes = file.getBytes();
+            Blob photoBlob = new SerialBlob(photoBytes);
+            room.setPhoto(photoBlob);
+        }
         return roomRepository.save(room);
     }
 
